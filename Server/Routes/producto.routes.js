@@ -1,11 +1,13 @@
 const express = require('express');
+const ProductoCtrl = require('../Controllers/producto.controller');
 const router = express.Router();
 
-router.get('/', (req, res)=> {
-    //res.send('Funcionando');
-    res.json({
-        status: 'Funcionando'
-    });
-});
+const producto = require('../Controllers/producto.controller');
+
+router.get('/', producto.getProductos);
+router.post('/', producto.createProducto);
+router.get('/:id', producto.getProducto);
+router.put('/:id', producto.editProducto);
+router.delete('/:id', producto.deleteProducto);
 
 module.exports = router;
