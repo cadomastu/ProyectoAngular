@@ -1,11 +1,36 @@
+<h3>FORMULARIO PRODUCTOS</h3>
+<br>
 <div class="container">
     <div class="row">
-        <div class=" col s5">
+        <div class=" col s8">
             <div class="card">
                 <div class="card-content">
                     <form #productoForm="ngForm" (ngSubmit)="addProducto()"> <!--#productoForm dentro del metodo-->
                         <div class="row">
-
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="nombre" placeholder="Introduce el nombre del producto">
+                            </div>
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="categoria" placeholder="Introduce la categoria del producto">
+                            </div>
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="descripcion" placeholder="Introduce la descripcion del producto">
+                            </div>
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="precio" placeholder="Introduce el precio del producto">
+                            </div>
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="stock" placeholder="Introduce el stock existente del producto">
+                            </div>
+                            <div class="input-field col s12">
+                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
+                                <input type="text" name="url" placeholder="Introduce la url del producto">
+                            </div>
                         </div>
                     </form>
                 </div>

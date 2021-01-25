@@ -22,7 +22,7 @@ app.use(express.json()); //Permite al servidor los formatos json a traves de req
 app.use('/api/productos',require('./Routes/producto.routes'));
 
 
-//Startinf the server
+//Starting the server
 //Se encarga de inicializar el servidor
 app.listen(app.get('port'), () =>{
     console.log('Server on port ', app.get('port'));
