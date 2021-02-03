@@ -12,4 +12,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  activarComponenteInicio(){
+    alert("Has pulsado el boton de inicio")
+  }
+
+  activarComponenteAdmin(){
+    alert("Has pulsado el boton de administrador")
+  }
+
 }

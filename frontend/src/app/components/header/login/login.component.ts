@@ -12,4 +12,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  activarComponenteLogin(){
+    alert("Has pulsado el boton de login")
+  }
+  activarComponenteReg(){
+    alert("Has pulsado el boton de registro")
+  }
+
 }

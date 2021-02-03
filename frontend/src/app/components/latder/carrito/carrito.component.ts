@@ -12,4 +12,9 @@ export class CarritoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  activarComponente(){
+
+    alert("Has pulsado el boton del carrito")
+
+  }
 }
