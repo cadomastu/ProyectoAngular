@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  usuario=''; // Elementos añadidos
+  contraseña='';// Elementos añadidos
+  modoPadre: number = 2 // Selector modo que selecciona el componente a mostrar
+
+  constructor(){}
+
 }
+

@@ -9,6 +9,8 @@ export class CarritoComponent implements OnInit {
 
   constructor() { }
 
+  totalElementos: number = 2
+
   ngOnInit(): void {
   }
 

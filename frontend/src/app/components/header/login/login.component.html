@@ -1,23 +1,27 @@
 <table>
+    <!--Campo en el que introducir el usuario-->
     <tr>
         <td>
             <p>Usuario:</p>
         </td>
         <td>
-            <input type="text" placeholder="Usuario">
+            <input type="text" placeholder="Usuario" [(ngModel)]="usuario">
         </td>
     </tr>
+    <!--Campo en el que introducir la contraseña-->
     <tr>
         <td>
             <p>Contraseña:</p>           
         </td>
         <td>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Contraseña" [(ngModel)]="pass">
         </td>
     </tr>
+    <!--Iniciar sesión-->
     <tr>
         <td colspan="2"><button (click) = activarComponenteLogin()>Login</button></td>
     </tr>
+    <!--Registrar un nuevo usuario-->
     <tr>
         <td colspan="2"><a href="" (click) = activarComponenteReg()>Nuevo Usuario</a></td>
     </tr>

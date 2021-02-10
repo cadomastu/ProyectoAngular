@@ -5,6 +5,17 @@
     background-color: blue;
 }
 
+#latIz{
+    width: 30%;
+}
+#Body{
+    width: 60%;
+    padding: 40px;
+}
+#latDer{
+    width: 10%;
+}
+
 #Footer{
     margin-left: 20px;
     margin-right: 20px;

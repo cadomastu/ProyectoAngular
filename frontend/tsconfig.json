@@ -1,9 +1,11 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "strictPropertyInitialization": false, //Elemento agregado por mi, para evitar que inicializar las variables en los TS
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,

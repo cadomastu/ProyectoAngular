@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoUserComponent implements OnInit {
 
+  usuario: string
+  contraseña: string
+  repcontraseña: string
+
   constructor() { }
 
   ngOnInit(): void {

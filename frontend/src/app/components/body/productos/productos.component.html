@@ -1,43 +1,73 @@
 <h3>FORMULARIO PRODUCTOS</h3>
 <br>
+<p>Introduce los datos para un nuevo producto</p>
+<br>
 <div class="container">
-    <div class="row">
-        <div class=" col s8">
-            <div class="card">
-                <div class="card-content">
-                    <form #productoForm="ngForm" (ngSubmit)="addProducto()"> <!--#productoForm dentro del metodo-->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="nombre" placeholder="Introduce el nombre del producto">
-                            </div>
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="categoria" placeholder="Introduce la categoria del producto">
-                            </div>
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="descripcion" placeholder="Introduce la descripcion del producto">
-                            </div>
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="precio" placeholder="Introduce el precio del producto">
-                            </div>
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="stock" placeholder="Introduce el stock existente del producto">
-                            </div>
-                            <div class="input-field col s12">
-                                <!-- <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="productoService.selectedProducto.nombre" placeholder="Introduce el nombre del producto">-->
-                                <input type="text" name="url" placeholder="Introduce la url del producto">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col s7">
-
-        </div>
-    </div>
+    <table>
+        <!--Nombre del producto-->
+        <tr>
+            <td>
+                <p>Nombre: *</p>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <!----------------------------------------------->
+        <!--Categoria del producto-->
+        <tr>
+            <td>
+                <p>Categoria: *</p>
+            </td>
+            <td>
+                <select name="cat" id="cat">
+                    <option value="conectores">Conectores</option>
+                    <option value="antenas">Antenas</option>
+                    <option value="decodificadores">Decodificadores</option>
+                    <option value="componentes">Componentes</option>
+                </select>
+            </td>
+        </tr>
+        <!----------------------------------------------->
+        <!--Descripción del producto-->
+        <tr>
+            <td>
+                <p>Descripción: *</p>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <!----------------------------------------------->
+        <!--Precio del producto-->
+        <tr>
+            <td>
+                <p>Precio: *</p>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <!----------------------------------------------->
+        <!--Stock-->
+        <tr>
+            <td>
+                <p>Stock: *</p>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <!----------------------------------------------->
+        <!--Url de la fotografia del producto-->
+        <tr>
+            <td>
+                <p>Url del producto: *</p>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <!----------------------------------------------->
+    </table>
 </div>

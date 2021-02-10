@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NONE_TYPE } from '@angular/compiler';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  @Output() messageEvent = new EventEmitter<string>();
+
+  public usuario: String
+  public pass: String
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   activarComponenteLogin(){
-    alert("Has pulsado el boton de login")
+    
+    alert("Usuario: "+this.usuario)
+    alert("Contraseña: "+this.pass)
+    this.messageEvent.emit("1")
   }
   activarComponenteReg(){
     alert("Has pulsado el boton de registro")
+    this.messageEvent.emit("0")
   }
 
 }
