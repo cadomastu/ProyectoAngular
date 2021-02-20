@@ -10,7 +10,7 @@
 <table id="Contenido">
     <tr>
         <td id="Header" colspan="3">
-            <app-header></app-header>
+            <app-header (messageEvent)="receiveMessage($event)"></app-header>
         </td>
     </tr>
     <tr>
@@ -18,7 +18,8 @@
           <app-lat-iz></app-lat-iz>
         </td>
         <td id="Body">
-          <app-body [modo]="modoPadre"></app-body>
+          <app-body [modo]="modoPadre"></app-body> 
+          <!--Envio desde el componente padre al hijo body un codigo númerico en funcion del cual se mostrará uno u otro contenido-->
         </td>
         <td id="LatDer">
           <app-latder></app-latder>

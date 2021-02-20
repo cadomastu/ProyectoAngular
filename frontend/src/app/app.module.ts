@@ -17,6 +17,9 @@ import { CarritoComponent } from './components/latder/carrito/carrito.component'
 import { NuevoUserComponent } from './components/body/nuevo-user/nuevo-user.component';
 import { PrincipalComponent } from './components/body/principal/principal.component';
 import { VerCarritoComponent } from './components/body/ver-carrito/ver-carrito.component';
+import { ProductoComponent } from './components/body/principal/producto/producto.component';
+import { SesionIniciadaComponent } from './components/header/sesion-iniciada/sesion-iniciada.component';
+
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { VerCarritoComponent } from './components/body/ver-carrito/ver-carrito.c
     CarritoComponent,
     NuevoUserComponent,
     PrincipalComponent,
-    VerCarritoComponent
+    VerCarritoComponent,
+    ProductoComponent,
+    SesionIniciadaComponent
+ 
   ],
   imports: [
     BrowserModule,

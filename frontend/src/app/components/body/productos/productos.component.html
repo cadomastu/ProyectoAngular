@@ -10,7 +10,7 @@
                 <p>Nombre: *</p>
             </td>
             <td>
-                <input type="text">
+                <input type="text" [(ngModel)]="nombre">
             </td>
         </tr>
         <!----------------------------------------------->
@@ -20,12 +20,7 @@
                 <p>Categoria: *</p>
             </td>
             <td>
-                <select name="cat" id="cat">
-                    <option value="conectores">Conectores</option>
-                    <option value="antenas">Antenas</option>
-                    <option value="decodificadores">Decodificadores</option>
-                    <option value="componentes">Componentes</option>
-                </select>
+                <input type="text" [(ngModel)]="categoria">
             </td>
         </tr>
         <!----------------------------------------------->
@@ -35,7 +30,7 @@
                 <p>Descripción: *</p>
             </td>
             <td>
-                <input type="text">
+                <input type="text" [(ngModel)]="descripcion">
             </td>
         </tr>
         <!----------------------------------------------->
@@ -45,7 +40,7 @@
                 <p>Precio: *</p>
             </td>
             <td>
-                <input type="text">
+                <input type="text" [(ngModel)]="precio">
             </td>
         </tr>
         <!----------------------------------------------->
@@ -55,7 +50,7 @@
                 <p>Stock: *</p>
             </td>
             <td>
-                <input type="text">
+                <input type="text" [(ngModel)]="stock">
             </td>
         </tr>
         <!----------------------------------------------->
@@ -65,9 +60,15 @@
                 <p>Url del producto: *</p>
             </td>
             <td>
-                <input type="text">
+                <input type="text" [(ngModel)]="urlFoto">
             </td>
         </tr>
         <!----------------------------------------------->
+        <!--Boton de confirmar cambios-->
+        <tr>
+            <td colspan="2">
+                <button id="BotonActualizar" (click)="EnviarBaseDatos()">Actualizar</button>
+            </td>
+        </tr>
     </table>
 </div>

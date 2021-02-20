@@ -1,45 +1,39 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnChanges {
+export class HeaderComponent {
+
+  public usuario: String
+
+  @Output() messageEvent = new EventEmitter<String>();
 
   constructor() { }
 
-  public message:string;
+  //Mensajes predifinidos de hijo a padre
+  public admin: String = "2"
+  public inicio: String = "1"
+  public compras: String = "5"
 
-  ngOnChanges(changes: SimpleChanges) {
-    
-    if (this.message) {
-      console.log(changes);
-      alert("Se ha producido un cambio en message")
-    }
-   
-  }
+  //Metodos de llamada
 
   activarComponenteInicio(){
-    alert("Has pulsado el boton de inicio")
-    this.message = "3"
-    alert(this.message)
+     this.messageEvent.emit(this.inicio)
   }
 
   activarComponenteAdmin(){
-    alert("Has pulsado el boton de administrador")
-    this.message = "2"
-    alert(this.message)
-    this.modoPrueba()
+    this.messageEvent.emit(this.admin)
   }
-
-  receiveMessage($event: string){
-    alert("He recivido el mensaje")
-    this.message = $event
+  
+  misCompras(){
+    this.messageEvent.emit(this.compras)
   }
-
+  
   modoPrueba(){
-    alert(this.message)
+   
   }
 
 }

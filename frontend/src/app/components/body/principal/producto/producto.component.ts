@@ -16,6 +16,7 @@ export class ProductoComponent implements OnInit {
   public stock: Number
 
   ngOnInit(): void {
+    
   }
 
 }

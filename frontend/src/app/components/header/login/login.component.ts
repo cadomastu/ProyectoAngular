@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  @Output() messageEvent = new EventEmitter<string>();
+  @Output() messageEvent = new EventEmitter<String>();
 
   public usuario: String
   public pass: String
@@ -21,13 +21,31 @@ export class LoginComponent implements OnInit {
 
   activarComponenteLogin(){
     
-    alert("Usuario: "+this.usuario)
-    alert("Contraseña: "+this.pass)
-    this.messageEvent.emit("1")
+    if (this.usuario==undefined && this.pass == undefined){
+      alert("Usuario o contraseña incorrectos")
+    }else{
+      if (this.comprobarUsuario()==true){
+
+          alert("Sesión iniciada")
+          this.messageEvent.emit(this.usuario)
+
+      }else{
+
+          alert("Usuario o contraseña incorrectos")
+
+      }
+      
+    }
+   
   }
   activarComponenteReg(){
     alert("Has pulsado el boton de registro")
     this.messageEvent.emit("0")
+  }
+
+
+  comprobarUsuario(){
+    return true
   }
 
 }
